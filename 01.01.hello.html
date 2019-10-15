@@ -14,7 +14,12 @@
     <script src="./node_modules/react-dom/dist/react-dom.js"></script>
     <script>
         ReactDOM.render(
-            React.DOM.h1(null, "Hello world !"),
+            React.DOM.h1(
+                {
+                    id: "my-heading"
+                },
+                 "Hello world !"
+            ),
             document.getElementById("app")
         )
     </script>
