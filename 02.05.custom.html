@@ -23,13 +23,26 @@
                 }
             },
 
+            getInitialState(){
+                return {
+                    text: this.props.text,
+                }
+            },
+
+            _textChange(ev){
+                this.setState({
+                    text: ev.target.value,
+                });
+            },
+
             render(){
                 return React.DOM.div(
                     null,
                     React.DOM.textarea({
-                        defaultValue: this.props.text,
+                        value: this.state.text,
+                        onChange: this._textChange,
                     }),
-                    React.DOM.h3(null, this.props.text.length)
+                    React.DOM.h3(null, this.state.text.length)
                 )
             }
         })
@@ -39,7 +52,7 @@
         ReactDOM.render(
             React.createElement(
                 TextAreaCounter,
-                { text:"ボブ" },
+                // { text:"ボブ" },
             ),
             document.getElementById("app")
         )
