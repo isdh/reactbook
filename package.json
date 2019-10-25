@@ -11,12 +11,18 @@
     "url": "reactbook"
   },
   "keywords": [
-    "react"
+    "react",
+    "react-dom"
   ],
   "author": "isdh",
   "license": "ISC",
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "typescript": "^3.6.4"
   }
 }
