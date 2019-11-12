@@ -1,7 +1,7 @@
 ReactDOM.render(
     React.createElement(Excel, {
         headers: headers,
-        initailData: data,
+        initialData: data,
     }),
     document.getElementById("app")
 );
